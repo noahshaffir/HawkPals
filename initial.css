@@ -12,6 +12,7 @@
     text-align: center;
 }
 .login{
+    cursor: pointer;
     padding: 0px 60px;
     font-family: Roboto;
     font-weight: 250;
@@ -22,6 +23,7 @@
     border: solid 1px ;
 }
 .signup{
+    cursor: pointer;
     padding: 0px 53px;
     font-family: Roboto;
     font-weight: 250;
