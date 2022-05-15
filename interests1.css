@@ -11,3 +11,14 @@
     font-weight: 150;
     text-align: center;
 }
+.submission{
+        cursor: pointer;
+        padding: 0px 53px;
+        font-family: Roboto;
+        font-weight: 250;
+        text-align: center;
+        font-size: 25px;
+        background-color: #ffffff;
+        border-radius: 7px;
+        border: solid 1px ;
+}
