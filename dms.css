@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+#circle {
+    margin-left: 25px;
+}
+.button1 {
+    font-family: Roboto;
+    margin-right: 50px;
+    font-size: 70px;
+    font-weight: 250;
+    background-color: #B5F4E9;
+    text-align: center;
+    border-radius: 7px;
+    border: solid 1px;
+}
+
+.button2 {
+    font-family: Roboto;
+    font-size: 70px;
+    font-weight: 250;
+    background-color: #35E1C3;
+    text-align: right;
+    border-radius: 7px;
+    border: solid 1px;
+    float: right;
+    margin-left: -50%;
+}
