@@ -1,0 +1,27 @@
+{
+  "name": "hawkpals",
+  "version": "1.0.0",
+  "description": "project for hawk hacks 2022",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahshaffir/HawkPals.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noahshaffir/HawkPals/issues"
+  },
+  "homepage": "https://github.com/noahshaffir/HawkPals#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "email-validator": "^2.0.4",
+    "mysql": "^2.18.1",
+    "mysql-async-simple": "^1.0.3"
+  }
+}
