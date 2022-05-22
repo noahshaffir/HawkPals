@@ -28,13 +28,16 @@ function checkValidPwd(pwd, pwdRepeat){
 
 async function checkUidExists(username, email){
     sql = "SELECT * FROM users WHERE userUid = ? OR userEmail = ?;"
-    r = []
-    con.query(sql, [username, email], (err, result, field) => {
-        if (err){throw err}
-        r.push(result)
-    });
-    con.end()
-    return r
+    const result = await new Promise((res, rej) => {
+        con.query(sql, [username, email], (err, result, field) => {
+            if (err){
+                rej(err)
+            }
+            else{res(result)}
+        });
+        con.end()
+    }).then(result => result)
+    return result
 }
 
 async function signup(name, email, username, pwd, pwdRepeat){
@@ -51,18 +54,14 @@ async function signup(name, email, username, pwd, pwdRepeat){
 
     valid = checkValidPwd(pwd, pwdRepeat)
     if (!valid){return "Invalid/Mismatch Password"}
-
-    console.log("Running")
     valid = await checkUidExists(username, email)
-    console.log(valid)
+    
+    if (valid.length > 0){
+        return "Username Already Exists!"
+    }
 
-    // if (valid){return "Username already exists!"}
-
-    // createUser(name, email, username, pwd, pwdRepeat)
-    console.log('Ran')
+    // createUser(name, email, username, pwd)
 }
-
-signup('Gary', 'singhgk.fateh@gmail.com', 'Gary', '4wEbkv76&Nev!GQI', '4wEbkv76&Nev!GQI')
 
 function login(uid, pwd){
     if (!uid, !pwd){return "Empty Input"}
